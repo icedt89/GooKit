@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{555E822A-7A3A-46F1-AAEE-1507EFF87A0A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>JanHafner.GooKit.Services</RootNamespace>
+    <AssemblyName>JanHafner.GooKit.Services</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\Annotations\BaseTypeRequiredAttribute.cs">
+      <Link>Annotations\BaseTypeRequiredAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\Annotations\CanBeNullAttribute.cs">
+      <Link>Annotations\CanBeNullAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\Annotations\CollectionAccessAttribute.cs">
+      <Link>Annotations\CollectionAccessAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\Annotations\CollectionAccessType.cs">
+      <Link>Annotations\CollectionAccessType.cs</Link>
+    </Compile>
+    <Compile Include="..\Annotations\ImplicitUseKindFlags.cs">
+      <Link>Annotations\ImplicitUseKindFlags.cs</Link>
+    </Compile>
+    <Compile Include="..\Annotations\ImplicitUseTargetFlags.cs">
+      <Link>Annotations\ImplicitUseTargetFlags.cs</Link>
+    </Compile>
+    <Compile Include="..\Annotations\InstantHandleAttribute.cs">
+      <Link>Annotations\InstantHandleAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\Annotations\InvokerParameterNameAttribute.cs">
+      <Link>Annotations\InvokerParameterNameAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\Annotations\ItemCanBeNullAttribute.cs">
+      <Link>Annotations\ItemCanBeNullAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\Annotations\ItemNotNullAttribute.cs">
+      <Link>Annotations\ItemNotNullAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\Annotations\LinqTunnelAttribute.cs">
+      <Link>Annotations\LinqTunnelAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\Annotations\LocalizationRequiredAttribute.cs">
+      <Link>Annotations\LocalizationRequiredAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\Annotations\MeansImplicitUseAttribute.cs">
+      <Link>Annotations\MeansImplicitUseAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\Annotations\NotifyPropertyChangedInvocatorAttribute.cs">
+      <Link>Annotations\NotifyPropertyChangedInvocatorAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\Annotations\NotNullAttribute.cs">
+      <Link>Annotations\NotNullAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\Annotations\PublicAPIAttribute.cs">
+      <Link>Annotations\PublicAPIAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\Annotations\PureAttribute.cs">
+      <Link>Annotations\PureAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\Annotations\RegexPatternAttribute.cs">
+      <Link>Annotations\RegexPatternAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\Annotations\StringFormatMethodAttribute.cs">
+      <Link>Annotations\StringFormatMethodAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\Annotations\UsedImplicitlyAttribute.cs">
+      <Link>Annotations\UsedImplicitlyAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\Annotations\ValueProviderAttribute.cs">
+      <Link>Annotations\ValueProviderAttribute.cs</Link>
+    </Compile>
+    <Compile Include="GoogleAuthorizationContext.cs" />
+    <Compile Include="GoogleRequestBase.cs" />
+    <Compile Include="GoogleRequestProcessor.cs" />
+    <Compile Include="GoogleSchemaEntity.cs" />
+    <Compile Include="GoogleServiceBase.cs" />
+    <Compile Include="GoogleServiceInitialization.cs" />
+    <Compile Include="ICanHaveApiKey.cs" />
+    <Compile Include="IGoogleService.cs" />
+    <Compile Include="ItemList.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\ExceptionMessages.Designer.cs">
+      <DependentUpon>ExceptionMessages.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="ServiceAccount\JsonWebToken.cs" />
+    <Compile Include="ServiceAccount\JsonWebTokenHashAlgorithm.cs" />
+    <Compile Include="ServiceAccount\ServiceAccountAuthorizationHandler.cs" />
+    <Compile Include="X509\IX509CertificateFactory.cs" />
+    <Compile Include="X509\X509CertificateFactory.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GooKit.Common\JanHafner.GooKit.Common.csproj">
+      <Project>{64F111C9-6151-4D44-BB22-22699B79DBCB}</Project>
+      <Name>JanHafner.GooKit.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="JanHafner.Queryfy, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Binaries\JanHafner.Queryfy.dll</HintPath>
+    </Reference>
+    <Reference Include="JanHafner.Queryfy.UrlPathBuilder, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Binaries\JanHafner.Queryfy.UrlPathBuilder.dll</HintPath>
+    </Reference>
+    <Reference Include="JanHafner.Restify, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Binaries\JanHafner.Restify.dll</HintPath>
+    </Reference>
+    <Reference Include="JanHafner.Restify.Caching, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Binaries\JanHafner.Restify.Caching.dll</HintPath>
+    </Reference>
+    <Reference Include="JanHafner.Restify.Json, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Binaries\JanHafner.Restify.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="JanHafner.Restify.Services, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Binaries\JanHafner.Restify.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="JanHafner.Restify.Services.OAuth2, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Binaries\JanHafner.Restify.Services.OAuth2.dll</HintPath>
+    </Reference>
+    <Reference Include="JanHafner.Restify.Services.OAuth2.Configuration, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Binaries\JanHafner.Restify.Services.OAuth2.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="JanHafner.Toolkit.Common, Version=1.2.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Binaries\JanHafner.Toolkit.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Ninject.3.2.2.0\lib\net45-full\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.WebRequest" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\ExceptionMessages.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ExceptionMessages.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
